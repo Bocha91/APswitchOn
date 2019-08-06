@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AP switch оn</string>
+    <string name="stop_service">Остановить Сервис</string>
+    <string name="ap_password">Пароль точки доступа:</string>
+    <string name="ap_ssid">Имя(SSID) точки доступа</string>
+    <string name="About">Постоянно сканирую точки доступа(AP), ищу среди них ту, имя и пароль
+        которой Вы указали. Если такая сеть обнаружена соединяюсь с ней. Когда её нет соединяюсь с любой сетью как
+        это бывает обычно.
+    </string>
+    <string name="enter_name_ap">Имя дочки доступа</string>
+    <string name="enter_password_ap">Пароль точки доступа</string>
+    <string name="requesting_location_access">Прошу разрешить доступ к определению местоположени</string>
+    <string name="do_you_want_to_open_location_settings">Хотите открыть настройки местоположения, чтобы включить службы
+        определения местоположения? Без этого WiFi точки доступа не будут обнаружены.
+    </string>
+    <string name="period_scanings">Период сканирования(сек):</string>
+    <string name="in_minutes">в секундах</string>
+    <string name="save">Сохранить</string>
+    <string name="textview">Остановить сервис и отключить его запуск при загрузке. Чтобы вернуть сервису возможность стартовать после загрузки нужно переустановить это приложение.</string>
+</resources>

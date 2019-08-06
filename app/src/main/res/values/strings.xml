@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AP switch on</string>
+    <string name="enter_name_ap">Enter name AP</string>
+    <string name="enter_password_ap">Enter password AP</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="ap_password">AP password:</string>
+    <string name="ap_ssid">AP SSID:</string>
+    <string name="About">Constantly scan access points (AP), looking for among them which you specified. If such a network is detected connect to it. How to connect it happens usually.</string>
+    <string name="requesting_location_access">Requesting location access</string>
+    <string name="do_you_want_to_open_location_settings">Do you want to open Location settings to enable location services? Without WiFi Access Points will not be detected.</string>
+    <string name="period_scanings">Period Scanings (sec):</string>
+    <string name="in_minutes">in seconds</string>
+    <string name="save">Save</string>
+    <string name="textview">Stop the service and disable its launch at boot. To return to the service the ability to start after downloading, you need to reinstall this application.</string>
+    <string name="Default" translatable="false">Default</string>
+</resources>
