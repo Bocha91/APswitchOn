@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         loadText();
     }
 
-        void loadText() {
+    void loadText() {
         // файлы настроек хранятся в каталоге /data/data/имя_пакета/shared_prefs/
 
         sPref = getSharedPreferences(SAVED_FILE,MODE_PRIVATE);
