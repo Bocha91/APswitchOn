@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
     final static String DEF_PASS = "12345678";
     final static String DEF_PERI = "45";
 
-
 /*
 
     // --------------- для приёма данных от MyIntentService -----------------------------------
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Log.d(TAG, "onCreate");
+        Log.d(TAG, "onCreate");
 
         SSIDText     = (EditText) findViewById(R.id.editText2);
         PasswordText = (EditText) findViewById(R.id.editText);
@@ -144,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override protected void onStart() {
-        //Log.d(TAG, "onStart");
+        Log.d(TAG, "onStart");
         super.onStart();
 
         // вывожу список известных сетей
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override protected void onResume() {
-        //Log.d(TAG, "onResume");
+        Log.d(TAG, "onResume");
         super.onResume();
         //registerReceiver( wifiReceiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION) );
 
@@ -185,19 +184,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override protected void onPause() {
-        //Log.d(TAG, "onPause");
+        Log.d(TAG, "onPause");
         //context.unregisterReceiver(receiver);
         super.onPause();
     }
 
     @Override protected void onStop() {
-        //Log.d(TAG, "onStop");
+        Log.d(TAG, "onStop");
         super.onStop();
         // The activity is no longer visible (it is now "stopped")
     }
 
     @Override protected void onDestroy() {
-        //Log.d(TAG, "onDestroy");
+        Log.d(TAG, "onDestroy");
         super.onDestroy();
 /*
         // --------------- приём данных от MyIntentService -----------------------------------

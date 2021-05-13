@@ -7,6 +7,7 @@ import java.lang.reflect.*;
 public class ApManager {
 
     //check whether wifi hotspot on or off
+    //проверьте, включена ли точка доступа Wi-Fi
     public static boolean isApOn(Context context) {
         WifiManager wifimanager = (WifiManager) context.getSystemService(context.WIFI_SERVICE);
         try {
@@ -19,11 +20,13 @@ public class ApManager {
     }
 
     // toggle wifi hotspot on or off
+    // включить или выключить точку доступа Wi-Fi
     public static boolean configApState(Context context) {
         WifiManager wifimanager = (WifiManager) context.getSystemService(context.WIFI_SERVICE);
         WifiConfiguration wificonfiguration = null;
         try {
             // if WiFi is on, turn it off
+            // если WiFi включен, выключить
             if(isApOn(context)) {
                 wifimanager.setWifiEnabled(false);
             }

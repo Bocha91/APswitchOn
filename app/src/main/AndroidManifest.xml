@@ -25,6 +25,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <receiver
             android:name=".MyScanReceiver"
             android:process=":remote">
@@ -32,10 +33,12 @@
                 <action android:name="android.net.wifi.SCAN_RESULTS" />
             </intent-filter>
         </receiver>
+
         <receiver
             android:name=".MyTimeReceiver"
             android:process=":remote">
         </receiver>
+
         <receiver
             android:name=".MyBootReceiver"
             android:process=":remote">
@@ -43,6 +46,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
         <service
             android:name=".MyIntentService"
             android:exported="false" />

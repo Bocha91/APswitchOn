@@ -74,7 +74,7 @@ public class MyIntentService extends IntentService {
             case MyTimeReceiver.EVENT: // 3 TIME
                 scheduleAlarm(30000);
 
-                // проверим проверим что задана сеть для подключения
+                // проверим что задана сеть для подключения
                 sPref = getSharedPreferences(MainActivity.SAVED_FILE,MODE_PRIVATE);
                 if( sPref.contains(MainActivity.SAVED_SSID)==false ) { // в базе нет данных
                     Log.d(TAG, "не задана сеть для подключения!");
@@ -141,7 +141,7 @@ public class MyIntentService extends IntentService {
                 break;
             case MyScanReceiver.EVENT: // 4 SCAN
 
-                // проверим проверим что задана сеть для подключения
+                // проверим что задана сеть для подключения
                 sPref = getSharedPreferences(MainActivity.SAVED_FILE,MODE_PRIVATE);
                 if( sPref.contains(MainActivity.SAVED_SSID)==false ) { // в базе нет данных
                     Log.d(TAG, "не задана сеть для подключения!");
@@ -152,21 +152,21 @@ public class MyIntentService extends IntentService {
                 // поиск сети в эфире
                 wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
                 List<ScanResult> wifiScanList = wifiManager.getScanResults();
-                //StringBuilder info = new StringBuilder();
                 Boolean scanOK = false;
+                StringBuilder info = new StringBuilder();
                 // вывод списка обнаруженных WiFi сетей
-                //info.append("\n \n???"+ssid+"\n");
+                info.append("\n \n???"+ssid+"\n");
                 len = wifiScanList.size();
                 for (int i = 0; i < len; i++) {
                     ScanResult ap = wifiScanList.get(i);
                     if(ap.SSID.equals(ssid)) {
-                        //info.append("\n  !!!!!!!!   "); // вижу требуемую сеть
+                        info.append("\n  !!!!!!!!   "); // вижу требуемую сеть
                         scanOK=true;
                     }
-                    //info.append(String.format("\n %6d ", ap.level)).append(ap.SSID)/*.append(" ").append(ap.BSSID)*/;
+                    info.append(String.format("\n %6d ", ap.level)).append(ap.SSID)/*.append(" ").append(ap.BSSID)*/;
                 }
-                //info.append("\n");
-                //Log.d(TAG,info.toString() );
+                info.append("\n");
+                Log.d(TAG,info.toString() );
 
                 if( scanOK == false ) {
                     Log.d(TAG,"Сети не видно" );
